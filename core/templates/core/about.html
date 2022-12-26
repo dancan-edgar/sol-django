@@ -1,0 +1,66 @@
+{% extends 'main.html' %}
+
+{% load static %}
+{% block content %}
+
+<div class="container-fluid px-2 px-md-5 my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-xl-4">
+            <img class="about-image img-fluid" src="{% static 'img/about.jpg' %}" alt="About Us Image">
+        </div>
+        <div class="col-lg-6 col-xl-4 mt-3 mt-lg-0">
+            <h2 class="fs-5 fw-bold">Teaming to take collective action and generate solutions to common problems.</h2>
+            <p>Seeds of Leadership Uganda, is committed to looking for avenues and strategies that facilitate the
+                realization of dreams
+                of Ugandans regardless of the tough conditions in which most children are brought up. Our commitments
+                include but not limited to;
+            </p>
+            <ul>
+                <li class="my-1">Career Guidance and Educational support</li>
+                <li class="my-1">Financial Literacy</li>
+                <li class="my-1">Developing, Equipping and Releasing Leaders</li>
+                <li class="my-1">Community Health</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="bg-light overflow-hidden team-members-section">
+    <div class="row justify-content-center px-2 px-md-5">
+        <h2 class="fw-bold fs-3 text-uppercase text-center mt-5 mb-3">Our Team</h2>
+        <p class="text-center mb-4">Meet our team, the people helping in extending our causes and providing solutions to
+            common problems.</p>
+
+        <div class="row mb-5 justify-content-center gap-3">
+            <div class="col-lg-3 px-0 team-container">
+                <div class="position-relative">
+                    <img class="team-profile rounded-4" src="{% static 'img/moses.png' %}" alt="Profile Image">
+                    <div class="team-member-overlay rounded-4 bg-overlay d-flex flex-column justify-content-center">
+                        <p class="text-center text-white fw-bold fs-3 my-2">Tugume Moses</p>
+                        <p class="text-center text-white fs-5 my-1 fst-italic">President</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 px-0 team-container">
+                <div class="position-relative">
+                    <img class="team-profile rounded-4" src="{% static 'img/denis.png' %}" alt="Profile Image">
+                    <div class="team-member-overlay rounded-4 bg-overlay d-flex flex-column justify-content-center">
+                        <p class="text-center text-white fw-bold fs-3 my-2">Tugume Moses</p>
+                        <p class="text-center text-white fs-5 my-1 fst-italic">President</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 px-0 team-container">
+                <div class="position-relative">
+                    <img class="team-profile rounded-4" src="{% static 'img/fahad.jpeg' %}" alt="Profile Image">
+                    <div class="team-member-overlay rounded-4 bg-overlay d-flex flex-column justify-content-center">
+                        <p class="text-center text-white fw-bold fs-3 my-2">Tugume Moses</p>
+                        <p class="text-center text-white fs-5 my-1 fst-italic">President</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

@@ -33,3 +33,99 @@ a.active,a:hover {
 .bg-black {
     background-color: var(--black) !important;
 }
+
+.contact-form {
+    margin-top: -100px;
+}
+.text-primary {
+    color: var(--green) !important;
+}
+.contact-icon {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: var(--green) !important;
+}
+.hero-image {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+.page-title {
+    font-size: 40px !important;
+    padding: 0 !important;
+    margin: -135px 0;
+}
+.bg-overlay {
+    background-color: rgba(0, 0, 0, .5);
+}
+.team-member-overlay {
+    height: 100%;
+    width: 100%;
+    display: none !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    right: 0 !important;
+}
+
+.team-member-overlay::after,.team-member-overlay::before {
+    content: "";
+    height: 80%;
+    width: 80%;
+    position: absolute;
+    border: 2px solid var(--white);
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+}
+
+.team-profile {
+    height: 100%;
+    width: 100%;
+}
+.team-container:hover .team-member-overlay {
+    display: flex !important;
+}
+
+.team-members-section {
+    background-color: rgba(131, 0, 171, 0.1) !important;
+}
+
+.mission-vision-values {
+    margin-top: -150px !important;
+}
+
+.mission-vision-values > .context {
+    z-index: 100;
+}
+.text-green {
+    color: var(--green) !important;
+}
+
+.bg-light-green {
+    background-color: rgba(138, 182, 58, 0.2) !important;;
+}
+
+.mission-vision-values .causes img {
+    display: block;
+}
+
+.bg-purple {
+    background-color: rgba(131, 0, 171, 0.1) !important;
+}
+ul {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.error {
+    color: red !important;
+}
+.error::before {
+    content: '*';
+}
+.info {
+    color: green !important;
+}

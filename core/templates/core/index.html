@@ -1,7 +1,158 @@
 {% extends 'main.html' %}
 
 {% block content %}
+{% load static %}
 
-    <h1>this is it</h1>
+<div class="home-page overflow-hidden">
+    <div class="row">
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="{% static 'img/slides/slider1.jpg' %}" class="d-block w-100" alt="Slide 1">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="{% static 'img/slides/slider2.jpg' %}" class="d-block w-100" alt="Slide 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'img/slides/slider5.jpg' %}" class="d-block w-100" alt="Slide 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class="row justify-content-center mission-vision-values">
+        <div class="col-10 col-lg-8 shadow rounded-4 my-5 context bg-white">
+            <div class="row">
+                <div class="col-12 col-md-4 p-4">
+                    <div class="mission">
+                        <img class="d-block mx-sm-auto mx-md-0" src="{% static 'img/icons/icons8-mission-100.png' %}"
+                             alt="Mission Icon">
+                        <div class="content mt-4">
+                            <h2 class="fw-bold fs-5 text-uppercase text-sm-center text-md-start">Our Mission</h2>
+                            <p class="text-sm-center text-md-start">
+                                Teaming to take collective action and generate solutions to common problems.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 p-4 border-start border-end">
+                    <div class="mission">
+                        <img class="d-block mx-sm-auto mx-md-0"
+                             src="{% static 'img/icons/icons8-preview-pane-100.png' %}" alt="Mission Icon">
+                        <div class="content mt-4">
+                            <h2 class="fw-bold fs-5 text-uppercase text-sm-center text-md-start">Our Vision</h2>
+                            <p class="text-sm-center text-md-start">
+                                To fight poverty by educating the youth and equipping them with the necessary skills.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 p-4">
+                    <div class="mission">
+                        <img class="d-block mx-sm-auto mx-md-0" src="{% static 'img/icons/icons8-values-100.png' %}"
+                             alt="Mission Icon">
+                        <div class="content mt-4">
+                            <h2 class="fw-bold fs-5 text-uppercase text-sm-center text-md-start">Our Values</h2>
+                            <p class="text-sm-center text-md-start">Leadership</p>
+                            <p class="text-sm-center text-md-start">Education</p>
+                            <p class="text-sm-center text-md-start">Financial Literacy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <h2 class="text-center text-uppercase fw-bold">Our Causes</h2>
+        <p class="text-center">We are team like-minded people and generous communities creating lasting solutions to
+            common problems.</p>
+        <div class="row mt-4 mb-5 justify-content-center">
+            <div class="my-4 my-md-0 col-md-4 col-lg-3 causes">
+                <img class="img-fluid" src="{% static 'img/education-in-ug.png' %}" alt="Education">
+                <div class="p-4 bg-light-green">
+                    <h3 class="cause-title fw-bold text-green">Education</h3>
+                    <p>
+                        Through the generosity of various individuals, we have been able to send almost 150 individuals
+                        through various levels of educational training. Education is a tough financial engagement for
+                        people living in a poor country
+                    </p>
+                    <span><a class="text-decoration-none text-green fw-bold" href="#">Read more</a></span>
+                </div>
+            </div>
+
+            <div class="my-4 my-md-0 col-md-4 col-lg-3 causes">
+                <img class="img-fluid" src="{% static 'img/financial1.png' %}" alt="Finance">
+                <div class="p-4 bg-light-green">
+                    <h3 class="cause-title fw-bold text-green">Finance</h3>
+                    <p>
+                        As one of the approaches towards poverty eradication, Seeds of Leadership is providing access to
+                        financial literacy trainings in various communities including slums and villages. Most of the
+                        People in the country
+                    </p>
+                    <span><a class="text-decoration-none text-green fw-bold" href="#">Read more</a></span>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-lg-3 causes">
+                <img class="img-fluid" src="{% static 'img/financial4.png' %}" alt="Leadership">
+                <div class="p-4 bg-light-green">
+                    <h3 class="cause-title fw-bold text-green">Leadership</h3>
+                    <p>
+                        Aware that “Everything rises and falls on leadership”, we believe that taking deliberate steps
+                        in building the capacity of the youth to take leadership roles is one of the approaches towards
+                        creating remarkable change.
+                    </p>
+                    <span><a class="text-decoration-none text-green fw-bold" href="#">Read more</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-purple overflow-hidden">
+    <div class="row p-2 p-lg-5 justify-content-center">
+        <h2 class="text-center text-uppercase fw-bold">what people say</h2>
+        <p class="text-center">Here are some testimonials from the people that have passed through Seeds of
+            Leadership</p>
+
+        <div class="row justify-content-center mt-4 gap-3">
+            <div class="col-lg-3 bg-white p-3 p-sm-5">
+                <p>Am Elijah, a medical student pursuing a degree in medicine and surgery and currently in my final
+                    year.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <img class="w-25 rounded-circle" src="{% static 'img/testimonials/Elijah.png' %}"
+                         alt="Testimonial Image">
+                    <p class="person-name fw-bold m-0">Elijah Ssebaggala</p>
+                </div>
+            </div>
+            <div class="col-lg-3 bg-white p-3 p-sm-5">
+                <p>Sometimes we end up losing hope even with great determination, perseverance and hard work</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <img class="w-25 rounded-circle" src="{% static 'img/testimonials/julius bruno.jpg' %}"
+                         alt="Testimonial Image">
+                    <p class="person-name fw-bold m-0">Bruno Magambe</p>
+                </div>
+            </div>
+            <div class="col-lg-3 bg-white  p-3 p-sm-5">
+                <p>Growing up as a kid my dream and passion was always to be an architect. I guess one of my biggest
+                    inspirations is my dad.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <img class="w-25 rounded-circle" src="{% static 'img/testimonials/Nathan mukisa.jpg' %}"
+                         alt="Testimonial Image">
+                    <p class="person-name fw-bold m-0">Nathan Mukisa</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock content %}

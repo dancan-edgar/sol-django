@@ -1,0 +1,83 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="contact-container overflow-hidden">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7730147463485!2d32.584016614723296!3d0.27304699980090585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbda6c399e367%3A0xe80040d3fe7fa1d8!2sSerwaniko%20Rd%2C%20Kampala!5e0!3m2!1sen!2sug!4v1671910310283!5m2!1sen!2sug"
+                    width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="col-10 col-md-8 col-lg-8 bg-white shadow rounded-3 p-5 mb-5 contact-form">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <h4 class="text-center text-uppercase fw-bold">Get in touch</h4>
+                    <p>Teaming to take collective action and generate solutions to common problems.</p>
+                    <p>Get in touch with us to contribute to problem solving</p>
+                    <div class="contact-details mt-3">
+                        <div>
+                            <div class="d-flex align-items-center my-3">
+                                <div class="contact-icon d-flex justify-content-center align-items-center me-3">
+                                    <i class="text-white fs-3 fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <a class="text-decoration-none text-black"
+                                       href="https://goo.gl/maps/Vy3csKLSkj1RCtG96">
+                                        <span class="d-block">Sserwaniko Road Abbas LC1 zone</span>
+                                        <span class="d-block">Luwafu, Makindye Kampala</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center my-3">
+                                <div class="contact-icon d-flex justify-content-center align-items-center me-3">
+                                    <i class="text-white fs-3 fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <a class="text-decoration-none text-black" href="mailto:info@sol-uganda.org">info@sol-uganda.org</a>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center my-3">
+                                <div class="contact-icon d-flex justify-content-center align-items-center me-3">
+                                    <i class="text-white fs-3 fa-solid fa-mobile"></i>
+                                </div>
+                                <div>
+                                    <a class="text-decoration-none text-black" href="tel:+256 700 928 767">
+                                        <span class="d-block">+256 700 928 767</span>
+                                        <span class="d-block">+256 704 646671 </span>
+                                        <span class="d-block">+256 706 466740 </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <h4 class="text-center text-uppercase fw-bold">Send us a message</h4>
+                    <div class="mt-3">
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            {% for field in form %}
+                            <div class="mb-3">
+                                {{ field }}
+                            </div>
+                            {% endfor %}
+                            {% if messages %}
+                            <ul class="messages mb-3">
+                                {% for message in messages %}
+                                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                                {% endfor %}
+                            </ul>
+                            {% endif %}
+                            <button type="submit" class="btn btn-lg btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
